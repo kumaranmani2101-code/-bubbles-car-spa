@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `https://wa.me/916379203209?text=${encodeURIComponent(message)}`;
 
         try {
-            const response = await fetch("http://192.168.1.2:3000/bookings", {
+            const response = await fetch("https://bubbles-car-spa.onrender.com/bookings", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
