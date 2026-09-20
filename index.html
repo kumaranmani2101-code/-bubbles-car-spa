@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bubbles Car Spa | Doorstep Car Wash</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            <img src="logo.jpeg" alt="Bubbles Car Spa Logo">
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#booking" class="nav-button">
+            Book Now
+        </a>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <main>
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    🚗 THE DOORSTEP CAR WASH
+                </p>
+
+                <h1>
+                    Professional Car Wash
+                    <span>At Your Doorstep.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Premium car cleaning services delivered right to your
+                    doorstep across Pondicherry.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#booking" class="primary-button">
+                        Book Your Car Wash
+                    </a>
+
+                    <a href="https://wa.me/916379203209"
+                       class="secondary-button">
+                        WhatsApp Us
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <img src="logo.jpeg"
+                     alt="Bubbles Car Spa">
+
+            </div>
+
+        </section>
+
+
+        <!-- Why Choose Us -->
+        <section class="why-us">
+
+            <div class="section-heading">
+
+                <p>WHY BUBBLES?</p>
+
+                <h2>
+                    We Bring The Car Wash
+                    <span>To You.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="features">
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Doorstep Service</h3>
+                    <p>
+                        No need to take your car anywhere.
+                        We come directly to you.
+                    </p>
+                </div>
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Professional Cleaning</h3>
+                    <p>
+                        Quality cleaning for a fresh and
+                        spotless finish.
+                    </p>
+                </div>
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚗</div>
+                    <h3>All Car Types</h3>
+                    <p>
+                        Hatchbacks, sedans, SUVs and
+                        all other car types.
+                    </p>
+                </div>
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Pondicherry Wide</h3>
+                    <p>
+                        Doorstep car wash service
+                        across Pondicherry.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Services -->
+        <section id="services" class="services">
+
+            <div class="section-heading">
+
+                <p>OUR SERVICES</p>
+
+                <h2>
+                    Choose Your
+                    <span>Perfect Wash.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="service-cards">
+
+                <div class="service-card">
+
+                    <h3>Normal Wash</h3>
+
+                    <div class="price">
+                        ₹499
+                    </div>
+
+                    <ul>
+                        <li>✓ Full Body Foam Wash</li>
+                        <li>✓ Full Interior Vacuuming</li>
+                        <li>✓ Dashboard Polish</li>
+                        <li>✓ Front Glass Cleaning</li>
+                        <li>✓ Tyre Polish</li>
+                    </ul>
+
+                    <a href="#booking">
+                        Book Normal Wash
+                    </a>
+
+                </div>
+
+
+                <div class="service-card premium">
+
+                    <div class="popular">
+                        MOST POPULAR
+                    </div>
+
+                    <h3>Premium Wash</h3>
+
+                    <div class="price">
+                        ₹649 <small>5 Seater</small>
+                    </div>
+
+                    <div class="price">
+                        ₹749 <small>7 Seater</small>
+                    </div>
+
+                    <ul>
+                        <li>✓ Full Body Foam Wash</li>
+                        <li>✓ Full Interior Vacuuming</li>
+                        <li>✓ Dashboard Polish</li>
+                        <li>✓ Tyre Polish</li>
+                        <li>✓ All Glasses Cleaning</li>
+                        <li>✓ Seat Polish</li>
+                    </ul>
+
+                    <a href="#booking">
+                        Book Premium Wash
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+ <section id="booking" class="booking">
+
+    <div class="section-heading">
+        <p>BOOK NOW</p>
+
+        <h2>
+            Get Your Car
+            <span>Washed Today.</span>
+        </h2>
+
+        <p class="booking-subtitle">
+            Fill in your details and book our doorstep car wash.
+        </p>
+    </div>
+
+    <form id="bookingForm" class="booking-form">
+
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Mobile Number</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your mobile number"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="carType">Car Type</label>
+
+            <select id="carType" name="carType" required>
+                <option value="">Select car type</option>
+                <option value="Hatchback">Hatchback</option>
+                <option value="Sedan">Sedan</option>
+                <option value="SUV">SUV</option>
+                <option value="MUV">MUV</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="service">Choose Service</label>
+
+            <select id="service" name="service" required>
+                <option value="">Select service</option>
+                <option value="Normal Wash - ₹499">
+                    Normal Wash - ₹499
+                </option>
+                <option value="Premium Wash - 5 Seater - ₹649">
+                    Premium Wash - 5 Seater - ₹649
+                </option>
+                <option value="Premium Wash - 7 Seater - ₹749">
+                    Premium Wash - 7 Seater - ₹749
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Preferred Date</label>
+
+            <input
+                type="date"
+                id="date"
+                name="date"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="time">Preferred Time</label>
+
+            <input
+                type="time"
+                id="time"
+                name="time"
+                required
+            >
+        </div>
+
+        <div class="form-group full-width">
+            <label for="address">Doorstep Address</label>
+
+            <textarea
+                id="address"
+                name="address"
+                rows="4"
+                placeholder="Enter your complete address"
+                required
+            ></textarea>
+        </div>
+
+        <div class="form-group full-width">
+            <label for="payment">Payment Method</label>
+
+            <select id="payment" name="payment" required>
+                <option value="">Select payment method</option>
+                <option value="Cash">Cash</option>
+                <option value="UPI">UPI</option>
+                <option value="Online Payment">Online Payment</option>
+            </select>
+        </div>
+
+        <button type="submit" class="booking-submit">
+            🚗 Book My Car Wash
+        </button>
+
+    </form>
+
+</section>
+
+
+        <!-- Contact -->
+        <section id="contact" class="contact">
+
+            <h2>Ready for a cleaner car?</h2>
+
+            <p>
+                Call or WhatsApp Bubbles Car Spa today.
+            </p>
+
+            <div class="contact-buttons">
+
+                <a href="tel:6379203209">
+                    📞 6379203209
+                </a>
+
+                <a href="tel:8838456829">
+                    📞 8838456829
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>Bubbles Car Spa</h3>
+
+        <p>
+            The Doorstep Car Wash 🚗💦
+        </p>
+
+        <p>
+            © 2026 Bubbles Car Spa. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+    <a href="https://wa.me/916379203209"
+   class="floating-whatsapp"
+   target="_blank">
+    💬
+</a>
+
+</body>
+</html>
