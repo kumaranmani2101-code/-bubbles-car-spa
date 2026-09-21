@@ -16,11 +16,29 @@ app.get("/", (req, res) => {
 function adminAuth(req, res, next) {
     const auth = req.headers.authorization;
 
-    if (!auth || auth !== `Bearer ${process.env.ADMIN_API_KEY}`) {
+    if (!auth || !auth.startsWith("Bearer ")) {
         return res.status(401).json({
             success: false,
             message: "Unauthorized"
         });
+    }
+
+    const token = auth.substring(7);
+
+    const expectedToken = crypto
+        .createHmac("sha256", process.env.ADMIN_API_KEY)
+        .update("BUBBLES_ADMIN")
+        .digest("hex");
+
+    if (token !== expectedToken) {
+        return res.status(401).json({
+            success: false,
+            message: "Unauthorized"
+        });
+    }
+
+    next();
+}
     }
 
     next();
