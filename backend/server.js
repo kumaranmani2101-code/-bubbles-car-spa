@@ -39,10 +39,7 @@ function adminAuth(req, res, next) {
 
     next();
 }
-    }
-
-    next();
-}
+    
 app.get("/bookings", adminAuth, async (req, res) => {
     const { data, error } = await supabase
         .from("bookings")
