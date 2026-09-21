@@ -12,6 +12,26 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.send("Bubbles Car Spa Backend is Running 🚗💦");
 });
+app.get("/bookings", async (req, res) => {
+    const { data, error } = await supabase
+        .from("bookings")
+        .select("*")
+        .order("created_at", { ascending: false });
+
+    if (error) {
+        console.error("FETCH BOOKINGS ERROR:", error);
+
+        return res.status(500).json({
+            success: false,
+            message: "Failed to fetch bookings."
+        });
+    }
+
+    res.json({
+        success: true,
+        bookings: data
+    });
+});
 
 app.post("/bookings", async (req, res) => {
     console.log("NEW BOOKING:", req.body);
