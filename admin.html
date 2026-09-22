@@ -261,16 +261,36 @@ button:hover {
         }
 
         loadBookings();
-        function adminLogin() {
+        async function adminLogin() {
     const password = document.getElementById("adminPassword").value;
 
-    if (password === "Bubbles@123") {
-        document.getElementById("loginBox").style.display = "none";
-    } else {
+    try {
+        const response = await fetch("https://bubbles-car-spa.onrender.com/admin/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ password: password })
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            sessionStorage.setItem("adminToken", data.token);
+            document.getElementById("loginBox").style.display = "none";
+        } else {
+            document.getElementById("loginError").textContent =
+                "❌ Incorrect password";
+        }
+
+    } catch (error) {
+        console.error("Login error:", error);
         document.getElementById("loginError").textContent =
-            "❌ Incorrect password";
+            "❌ Server connection failed";
     }
 }
+    
+
     </script>
 
 </body>
